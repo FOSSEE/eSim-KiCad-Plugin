@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/license-GPL--3.0-orange)
 ![FOSSEE](https://img.shields.io/badge/FOSSEE-IIT%20Bombay-red)
 
-A pair of companion KiCad plugins that eliminate the entire manual workflow of converting a KiCad schematic into a runnable eSim/ngspice simulation — and add a full-featured waveform analysis suite on top.
+A single KiCad plugin consisting of two companion files that together eliminate the entire manual workflow of converting a KiCad schematic into a runnable eSim/ngspice simulation — and add a full-featured waveform analysis suite on top.
 
 **Developed for:** FOSSEE Semester Long Internship Spring 2026 — Task 6: KiCad Plugin Development
 **Author:** Imran Farhat
@@ -14,7 +14,7 @@ A pair of companion KiCad plugins that eliminate the entire manual workflow of c
 
 ---
 
-## The Two Plugins
+## Plugins Files
 
 ### eSim-BRIDGE (`esim_bridge.py`) — v2.1.0
 
