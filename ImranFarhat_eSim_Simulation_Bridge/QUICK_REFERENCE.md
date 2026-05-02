@@ -1,4 +1,4 @@
-# Quick Reference — eSim Simulation Bridge
+# Quick Reference - eSim Simulation Bridge
 
 *eSim-BRIDGE v2.1.0 / eSim-SPICE v1.0.0 | FOSSEE IIT Bombay | May 2026*
 
@@ -23,8 +23,8 @@
 | Analysis | Key Parameters | Result |
 |---|---|---|
 | Transient | Step=0.1ms, Stop=10ms | Waveform viewer |
-| AC Sweep | dec, 1Hz–1MEGHz, 100pts | Waveform viewer |
-| DC Sweep | V1, 0–5V, step 0.1 | Waveform viewer |
+| AC Sweep | dec, 1Hz-1MEGHz, 100pts | Waveform viewer |
+| DC Sweep | V1, 0-5V, step 0.1 | Waveform viewer |
 | Operating Point | (none) | DC voltages popup |
 | Noise | output node, source, freq range | inoise/onoise values |
 | Transfer Function | output node, input source | Gain + impedances popup |
@@ -55,7 +55,7 @@ Device type:  Sine
 Sim.Params:   dc=0 ampl=1 f=1k ac=1
 ```
 
-For Sensitivity Analysis — set `dc=1` to provide a DC operating point.
+For Sensitivity Analysis - set `dc=1` to provide a DC operating point.
 
 ---
 
@@ -79,12 +79,12 @@ For Sensitivity Analysis — set `dc=1` to provide a DC operating point.
 | FOUND | Exact match in eSim library | None |
 | EQUIV | Pin-compatible substitute used | None |
 | TEXTBK | Generated from textbook parameters | None (sim will run) |
-| MISSING | No model found — MCU/mic/unknown IC | Expected for MCUs |
-| OK | Passive/source — no model needed | None |
+| MISSING | No model found - MCU/mic/unknown IC | Expected for MCUs |
+| OK | Passive/source - no model needed | None |
 
 ---
 
-## Preflight Checker — What It Catches
+## Preflight Checker - What It Catches
 
 | Check | Error if... |
 |---|---|
@@ -97,7 +97,7 @@ For Sensitivity Analysis — set `dc=1` to provide a DC operating point.
 
 ---
 
-## Demo Circuit (Voltage Divider — Proven Test)
+## Demo Circuit (Voltage Divider - Proven Test)
 
 | Component | Value |
 |---|---|
