@@ -1,13 +1,13 @@
-# eSim Simulation Bridge — KiCad Plugin Suite
+# eSim Simulation Bridge - KiCad Plugin Suite
 
 ![Platform](https://img.shields.io/badge/platform-linux-blue)
 ![KiCad](https://img.shields.io/badge/KiCad-8%2F9-green)
 ![License](https://img.shields.io/badge/license-GPL--3.0-orange)
 ![FOSSEE](https://img.shields.io/badge/FOSSEE-IIT%20Bombay-red)
 
-A single KiCad plugin consisting of two companion files that together eliminate the entire manual workflow of converting a KiCad schematic into a runnable eSim/ngspice simulation — and add a full-featured waveform analysis suite on top.
+A single KiCad plugin consisting of two companion files that together eliminate the entire manual workflow of converting a KiCad schematic into a runnable eSim/ngspice simulation - and add a full-featured waveform analysis suite on top.
 
-**Developed for:** FOSSEE Semester Long Internship Spring 2026 — Task 6: KiCad Plugin Development
+**Developed for:** FOSSEE Semester Long Internship Spring 2026 - KiCad Plugin Development
 **Author:** Imran Farhat
 **Institution:** IIT Bombay (FOSSEE)
 **Contact:** imranfarhat.official@gmail.com | contact-esim@fossee.in
@@ -16,11 +16,11 @@ A single KiCad plugin consisting of two companion files that together eliminate 
 
 ## Plugins Files
 
-### eSim-BRIDGE (`esim_bridge.py`) — v2.1.0
+### eSim-BRIDGE (`esim_bridge.py`) - v2.1.0
 
 One-click simulation bridge. Converts KiCad schematics to valid SPICE format, runs ngspice directly from within KiCad, and launches eSim with the project ready to simulate. Includes a full interactive waveform viewer with FFT, Bode plot, cursor, parametric sweep, and measurement tools.
 
-### eSim-SPICE (`esim_spice_linker.py`) — v1.0.0
+### eSim-SPICE (`esim_spice_linker.py`) - v1.0.0
 
 Automatic SPICE model linker. Scans eSim's built-in open-source library (1,300+ files) and automatically resolves and injects SPICE models for every active component in the schematic. Eliminates all manual model selection.
 
@@ -30,7 +30,7 @@ Both files together form **one plugin** installed as a single KiCad package.
 
 ## What They Do Together
 
-Without these plugins, simulating a KiCad circuit in eSim requires **26 manual steps** taking 10–15 minutes — and must be repeated every time a component value changes.
+Without these plugins, simulating a KiCad circuit in eSim requires **26 manual steps** taking 10-15 minutes - and must be repeated every time a component value changes.
 
 With eSim-BRIDGE + eSim-SPICE, the workflow is:
 
@@ -68,7 +68,7 @@ After running ngspice, the interactive waveform viewer opens with:
 | 📈 Bode Plot | Dual-pane gain (dB) + phase (degrees) for AC analysis |
 | 📏 Measure | RMS, Average, Peak, Min, Max, Frequency via zero-crossing |
 | 🖱 Cursor | Interactive crosshair with auto-scaled time/frequency readout |
-| 🔁 Sweep | Parametric sweep — vary one R/C/L value, overlay results |
+| 🔁 Sweep | Parametric sweep - vary one R/C/L value, overlay results |
 | 💾 Save PNG | Save waveform to image file |
 | ⟳ Refresh | Reload .raw file |
 
@@ -106,11 +106,11 @@ Mirrors eSim's own KicadToNgspice window:
 
 For every active component, eSim-SPICE searches in priority order:
 
-1. **eSim `deviceModelLibrary/`** — 61 device model categories
-2. **eSim `SubcircuitLibrary/`** — 586+ subcircuit folders
-3. **User's `~/.esim-bridge/models/`** — drop any `.lib`/`.sub` file here
-4. **Known equivalents** — re-searches eSim with compatible substitutes
-5. **Textbook parameters** — last-resort `.model` card from published values
+1. **eSim `deviceModelLibrary/`** - 61 device model categories
+2. **eSim `SubcircuitLibrary/`** - 586+ subcircuit folders
+3. **User's `~/.esim-bridge/models/`** - drop any `.lib`/`.sub` file here
+4. **Known equivalents** - re-searches eSim with compatible substitutes
+5. **Textbook parameters** - last-resort `.model` card from published values
 
 Model status codes in the coverage report:
 
@@ -119,8 +119,8 @@ Model status codes in the coverage report:
 | FOUND | Exact match in eSim's open-source library |
 | EQUIV | Pin-compatible substitute used |
 | TEXTBK | Generated from textbook parameters (educational use) |
-| MISSING | No model found anywhere — MCU/mic/unknown IC |
-| OK | Passive or source — no model needed |
+| MISSING | No model found anywhere - MCU/mic/unknown IC |
+| OK | Passive or source - no model needed |
 
 ---
 
@@ -149,7 +149,7 @@ Model status codes in the coverage report:
 
 | Category | Models |
 |---|---|
-| Diodes | 1N4148, 1N4007, 1N4001–4004, 1N5817/5819, Zener variants, LED (red/green/blue) |
+| Diodes | 1N4148, 1N4007, 1N4001-4004, 1N5817/5819, Zener variants, LED (red/green/blue) |
 | NPN BJTs | 2N2222, 2N3904, BC547/B, BC548, 2N2219, TIP31 |
 | PNP BJTs | 2N3906, 2N2907, BC557, BC558, TIP32 |
 | N-MOSFET | IRF540/N, IRF3205, IRF830, 2N7000, 2N7002, BS170 |
@@ -174,7 +174,7 @@ Model status codes in the coverage report:
 
 | Environment | Status |
 |---|---|
-| Ubuntu 24.04 in VirtualBox (Windows host) | ✅ Fully tested — recommended |
+| Ubuntu 24.04 in VirtualBox (Windows host) | ✅ Fully tested - recommended |
 | Native Ubuntu 24.04 | ✅ Works perfectly |
 | WSL 2 with WSLg (Windows 11) | ⚠️ May work |
 | macOS | ❌ eSim 2.5 is Linux-only |
@@ -183,14 +183,14 @@ Model status codes in the coverage report:
 
 ## Installation
 
-### Step 1 — Install KiCad 8.0
+### Step 1 - Install KiCad 8.0
 
 ```bash
 sudo apt update && sudo apt install -y kicad
 kicad-cli --version   # Expected: Application: kicad-cli 8.0.x
 ```
 
-### Step 2 — Install eSim 2.5
+### Step 2 - Install eSim 2.5
 
 ```bash
 cd ~/Downloads
@@ -203,7 +203,7 @@ ls ~/Downloads/eSim-2.5/src/frontEnd/Application.py
 ls ~/.esim/env/bin/python3
 ```
 
-### Step 3 — Clone and Install the Plugin
+### Step 3 - Clone and Install the Plugin
 
 ```bash
 cd ~
@@ -212,18 +212,18 @@ cp -r ~/KiCad-Plugin-ImranFarhat/KiCad_Plugin \
     ~/.local/share/kicad/8.0/scripting/plugins/esim_bridge
 ```
 
-### Step 4 — Fix Username ⚠️ MANDATORY
+### Step 4 - Fix Username ⚠️ MANDATORY
 
 ```bash
 sed -i "s/imran-farhat/$(whoami)/g" \
     ~/.local/share/kicad/8.0/scripting/plugins/esim_bridge/esim_bridge.py
 
-# Verify — must return NO output
+# Verify - must return NO output
 grep "imran-farhat" \
     ~/.local/share/kicad/8.0/scripting/plugins/esim_bridge/esim_bridge.py
 ```
 
-### Step 5 — Fix `__init__.py` and Create Workspace
+### Step 5 - Fix `__init__.py` and Create Workspace
 
 ```bash
 echo "from .esim_bridge import ESimBridgePlugin" > \
@@ -234,7 +234,7 @@ echo '{"/home/'$(whoami)'/eSim-Workspace/esim_bridge_project": []}' \
     > ~/eSim-Workspace/.projectExplorer.txt
 ```
 
-### Step 6 — Restart KiCad and Verify
+### Step 6 - Restart KiCad and Verify
 
 Open KiCad → PCB Editor → look for the **eSim Bridge** icon in the toolbar.
 If not visible: **Tools → External Plugins → Refresh Plugins**
@@ -265,14 +265,14 @@ mkdir -p ~/eSim-Workspace
 echo '{"/home/'$(whoami)'/eSim-Workspace/esim_bridge_project": []}' \
     > ~/eSim-Workspace/.projectExplorer.txt
 
-echo "Installation complete — launch KiCad with: kicad"
+echo "Installation complete - launch KiCad with: kicad"
 ```
 
 ---
 
 ## Demo Circuit (Recommended for Testing)
 
-Use a voltage divider with a sine source — the mentor-approved test circuit:
+Use a voltage divider with a sine source - the mentor-approved test circuit:
 
 | Component | Value |
 |---|---|
@@ -292,8 +292,8 @@ To test Sensitivity Analysis, set V1 dc=1 to provide a DC operating point.
 
 ```
 KiCad_Plugin/
-├── esim_bridge.py          # eSim-BRIDGE v2.1.0 — main plugin
-├── esim_spice_linker.py    # eSim-SPICE v1.0.0 — model auto-linker
+├── esim_bridge.py          # eSim-BRIDGE v2.1.0 - main plugin
+├── esim_spice_linker.py    # eSim-SPICE v1.0.0 - model auto-linker
 ├── icon.png                # Toolbar icon
 └── __init__.py             # Package entry point
 
@@ -317,7 +317,7 @@ Key limitations:
 - **MCUs (ATtiny85, Arduino, etc.)**: No SPICE models exist industry-wide. MISSING status is correct and expected.
 - **74xx digital ICs**: ngspice is an analog simulator; digital logic cannot be meaningfully simulated.
 - **Condenser microphones**: No standard SPICE model exists. Approximated as 10mV AC source.
-- **UTF-8 popup (cosmetic)**: A known eSim 2.5 issue — dismiss and re-simulate.
+- **UTF-8 popup (cosmetic)**: A known eSim 2.5 issue - dismiss and re-simulate.
 - **Linux only**: eSim 2.5 is Linux-only.
 
 ---
@@ -366,9 +366,9 @@ rm -rf ~/.local/share/kicad/8.0/scripting/plugins/esim_bridge/__pycache__
 
 ## License
 
-GPL-3.0 — Free to use, modify, and distribute with attribution.
+GPL-3.0 - Free to use, modify, and distribute with attribution.
 
 ---
 
 *Developed as part of FOSSEE Semester Long Internship Spring 2026, IIT Bombay.*
-*Task 6: KiCad Plugin Development*
+*KiCad Plugin Development*
