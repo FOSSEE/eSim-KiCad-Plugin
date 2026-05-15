@@ -26,7 +26,7 @@ Without this plugin, simulating a KiCad circuit in eSim requires a lengthy manua
 1. Open KiCad → draw schematic → save (`Ctrl+S`)
 2. Switch to PCB Editor → click the **eSim Simulation Bridge** toolbar icon
 3. Select analysis type and parameters in the 6-tab dialog → Auto-Linker shows Model Coverage Report
-4. Click **Convert →** → review SPICE preview → click **Run with ngspice →**
+4. Click **Convert** → review SPICE preview → click **Run with ngspice**
 5. Interact with the waveform viewer: FFT, Bode plot, cursor, parametric sweep
 
 **Total: 5 steps in approximately 30 seconds.**
