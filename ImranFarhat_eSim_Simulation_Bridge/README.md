@@ -275,7 +275,7 @@ git clone https://github.com/FOSSEE/eSim-KiCad-Plugin.git
 
 ```bash
 mkdir -p ~/.local/share/kicad/8.0/scripting/plugins/esim_bridge
-cp -r ~/eSim-KiCad-Plugin/ImranFarhat_eSim_Simulation_Bridge/eSim_KiCad_Plugin/* \
+cp -r ~/eSim-KiCad-Plugin/ImranFarhat_eSim_Simulation_Bridge/eSim_Simulation_Bridge/* \
     ~/.local/share/kicad/8.0/scripting/plugins/esim_bridge/
 ```
 
@@ -315,7 +315,7 @@ Use the Three-Phase Bridge Rectifier circuit for the full demo:
 
 ```
 ImranFarhat_eSim_Simulation_Bridge/
-├── eSim_KiCad_Plugin/
+├── eSim_Simulation_Bridge/
 │   ├── __init__.py                          # Package entry point
 │   ├── esim_bridge.py                       # eSim Simulation Bridge v1.0.0
 │   ├── esim_spice_linker.py                 # SPICE Model Auto-Linker v1.0.0
