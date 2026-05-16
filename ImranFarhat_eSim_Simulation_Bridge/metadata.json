@@ -1,0 +1,39 @@
+{
+    "name": "eSim Simulation Bridge",
+    "description": "One-click KiCad-to-eSim simulation bridge - automatic SPICE model linking, 7 analysis types, embedded waveform viewer with FFT, Bode plot, parametric sweep, and Python plot window integration",
+    "description_full": "eSim Simulation Bridge is a single KiCad 8.0 action plugin that reduces the entire KiCad-to-eSim/ngspice simulation workflow
+            to one toolbar button click. It consists of three components: esim_bridge.py (v1.0.0) - core plugin handling netlist export, SPICE conversion, 
+            7 analysis types (Transient, AC, DC, Operating Point, Noise, Transfer Function, Sensitivity), ngspice batch execution, and eSim project generation; 
+            esim_spice_linker.py (v1.0.0) - SPICE Model Auto-Linker that scans eSim 2.5's built-in library (647 files) and resolves models via a 5-tier 
+            scored matching algorithm; ngspiceSimulation package - eSim's Python plot window integrated dynamically via importlib. Features include an 
+            embedded waveform viewer (FFT, Bode plot, cursor, parametric sweep, runtime stats panel), a 6-tab KicadToNgspiceDialog mirroring eSim's own interface, 
+            and a preflight netlist checker. Validated on two FOSSEE Research Migration circuits: Three-Phase Bridge Rectifier (149.93 Hz ripple confirmed) and 
+            Two-Stage Stagger-Tuned Amplifier (gain peaks at 139.4 kHz and 166.8 kHz confirmed).",
+    "identifier": "com.fossee.esim-bridge",
+    "author": {
+        "name": "Imran Farhat - FOSSEE Semester Long Internship Spring 2026, IIT Bombay",
+        "contact": {
+            "email": "imranfarhat.official@gmail.com",
+            "organization": "contact-esim@fossee.in"
+        }
+    },
+    "license": "GPL-3.0",
+    "resources": {
+        "homepage": "https://github.com/FOSSEE/eSim-KiCad-Plugin",
+        "bugtracker": "https://github.com/FOSSEE/eSim-KiCad-Plugin/issues",
+        "documentation": "https://github.com/FOSSEE/eSim-KiCad-Plugin/blob/main/ImranFarhat_eSim_Simulation_Bridge/README.md"
+    },
+    "versions": [
+        {
+            "version": "1.0.0",
+            "status": "stable",
+            "kicad_version": "8.0",
+            "kicad_version_max": "9.99",
+            "platforms": ["linux"],
+            "download_sha256": "",
+            "download_url": "https://github.com/FOSSEE/eSim-KiCad-Plugin/archive/refs/heads/main.zip",
+            "download_size": 0,
+            "install_size": 944446
+        }
+    ]
+}
