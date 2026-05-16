@@ -1,0 +1,28 @@
+{
+    "identifier": "com.kicad.kicad-design-diary",
+    "name": "KiCad Design Diary",
+    "description": "Automatically tracks every change made to a PCB design in plain English. Zero setup, zero Git required. Every save is recorded as a human-readable changelog with a built-in timeline panel and exportable report.",
+    "description_full": "KiCad Design Diary silently snapshots your entire PCB design on every save, compares it to the previous state, and generates a plain English description of exactly what changed. No Git. No manual effort. No setup. A native timeline panel shows your complete design history and a one-click export generates a professional HTML report.",
+    "identifier_url": "https://github.com/Sia2005/kicad-design-diary",
+    "author": {
+        "name": "Sia",
+        "contact": {
+            "github": "https://github.com/Sia2005"
+        }
+    },
+    "license": "MIT",
+    "resources": {
+        "homepage": "https://github.com/Sia2005/kicad-design-diary"
+    },
+    "versions": [
+        {
+            "version": "1.0.0",
+            "status": "development",
+            "kicad_version": "7.0",
+            "kicad_version_max": "9.99",
+            "download_sha256": "",
+            "download_url": "",
+            "install_size": 0
+        }
+    ]
+}
